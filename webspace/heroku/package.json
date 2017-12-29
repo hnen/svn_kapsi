@@ -1,0 +1,17 @@
+{
+  "name": "webspace",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~3.4.7",
+    "socket.io": "~0.9.16",
+    "ws": "~0.4.31",
+    "routes": "~0.2.0"
+  }
+}

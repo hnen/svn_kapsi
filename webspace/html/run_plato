@@ -1,0 +1,1 @@
+plato -r -l .jshintrc -d reports `find js -name "*.js" -not -path "js/server/node_modules/*" -not -path "js/lib/*" -not -path "js/test/*" -not -path "js/client/webspace.js" -not -path "js/client/lib/*"`

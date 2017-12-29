@@ -1,0 +1,13 @@
+#!/bin/sh
+
+browserify html/js/client/main.js -o html/js/client/webspace.js
+svn export --force html kapsi
+rm kapsi/js/*
+rm -r kapsi/js/server
+rm kapsi/js/client/GameClient.js 
+rm kapsi/js/client/GameRenderer.js 
+rm kapsi/js/client/main.js 
+cd kapsi
+scp -r . hth@lakka.kapsi.fi:sites/hth.kapsi.fi/www/luola
+cd ..
+

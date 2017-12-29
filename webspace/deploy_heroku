@@ -1,0 +1,10 @@
+#!/bin/sh
+
+svn export --force html heroku
+rm -r heroku/js/client
+cd heroku
+git add .
+git commit -m "deploy"
+git push heroku master
+cd ..
+
