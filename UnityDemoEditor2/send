@@ -1,0 +1,1 @@
+scp -rp Build/* hth@lakka.kapsi.fi:sites/hth.kapsi.fi/www/simuinvi
