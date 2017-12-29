@@ -1,0 +1,11 @@
+<shader code="data/test.fx">
+  <ps method="PS"/>
+  <vs method="VS">
+    <cbuffer>
+      <float name="aspectRatio"/>
+    </cbuffer>
+    <layout>
+      <float4 name="position"/>
+    </layout>
+  </vs>
+</shader>
