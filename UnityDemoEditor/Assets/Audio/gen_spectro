@@ -1,0 +1,2 @@
+~/Downloads/ffmpeg -i breakshit_5.mp3 song.wav
+~/Downloads/sox-14.4.1/sox song.wav -n spectrogram -X 100 -m -r
