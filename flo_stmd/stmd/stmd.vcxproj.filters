@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Demo.cpp" />
+    <ClCompile Include="..\src\Gfx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Demo.h" />
+    <ClInclude Include="..\src\DemoResources.h" />
+    <ClInclude Include="..\src\poopie.h" />
+    <ClInclude Include="..\src\Gfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\rel\data\basic.fx" />
+    <Text Include="..\rel\data\overlay.fx" />
+    <Text Include="..\rel\data\floaters.fx" />
+    <Text Include="..\rel\data\pp_blur.fx" />
+    <Text Include="..\rel\data\floaters_prepass.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="NewFilter1">
+      <UniqueIdentifier>{6fb1ae0d-a707-40d0-83cd-afb2c67fbd2a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
