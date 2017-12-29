@@ -1,0 +1,384 @@
+ [
+
+	
+	{
+		t: [0, 300],
+		a: pp,
+		p: { edge: 0.0002, s_edge: 4.0, s_bg: 0.5, t_edge:1.0, pow_bg:6.0, colorscale:20.0 }
+	},
+	{
+		t: [0, 23.24],
+		layer: kuva,
+		a: [
+			{
+				a: anim,
+				p: { id:1, mul: 0.8, alpha:{ lerp: [0,2.5]}, blur:10, speed:7 }
+			} 
+		]
+	},
+	{
+		t: [18.8, 19.8],
+		a: tonnijani,
+		layer: kuva,
+		p: { xpos:0.3, ypos:{lerp:[-2.0,2.0]}, size:0.8, speed:94 }
+	},
+	{
+		t: [137.3, 137.8],
+		a: tonnijani,
+		layer: kuva,
+		p: { xpos:-1.25, ypos:{lerp:[-1.5,1.5]}, size:1.0, speed:44 }
+	},
+	{
+		t: [187.9, 188],
+		a: tonnijani,
+		layer: kuva,
+		p: { xpos:-0.25, ypos:{lerp:[-1.2,0.8]}, size:3.9, speed:14 }
+	},
+	
+	{
+		t: [180, 181],
+		a: [{
+			a:tonnijani,
+			layer: teksti,
+			p: 
+			{ xpos:0.2, ypos:{lerp:[-3,3]}, size:0.6, speed:14 }
+			},
+			
+				{
+					a: pp,
+					p: { edge: 0.0001, s_edge: 10.10, s_bg: 0.05, t_edge:0.15, pow_bg:6.0, colorscale:200.0 }
+				},
+				{
+					a: blur,
+					p: { layer:teksti, amount:0.002, mul: 10.8 }
+				}
+		
+		]
+
+		
+	},
+	{
+		t: [180.47, 180.53],
+		a: [{
+		a: tonnijani,
+		layer: kuva,
+		p: { xpos:{lerp:[-0.3,-0.25]}, ypos:0, size:0.4, speed:56 }
+		},
+				{
+					a: pp,
+					p: { edge: 0.0001, s_edge: 10.10, s_bg: 0.05, t_edge:0.15, pow_bg:6.0, colorscale:200.0 }
+				},
+				{
+					a: blur,
+					p: { layer:kuva, amount:0.002, mul: 10.8 }
+				}
+				]
+	},
+	{
+		t: [180.47, 180.53],
+		a:[{
+		a: tonnijani,
+		layer: kuva,
+		p: { xpos:-0.1, ypos:-2, size:2.4, speed:56 }
+		},
+				{
+					a: pp,
+					p: { edge: 0.01, s_edge: 10000.10, s_bg: 1000.5, t_edge:0.15, pow_bg:4.0, colorscale:20.0 }
+				},
+				{
+					a: blur,
+					p: { layer:kuva, amount:0.002, mul: 0.8 }
+				}
+				]
+	},
+	{
+		t: [180.47, 180.53],
+		a: tonnijani,
+		layer: kuva,
+		p: { xpos:0.2, ypos:2.0, size:2.7, speed:56 }
+	},
+	{
+		t: [180.2, 180.43],
+		a: tonnijani,
+		layer: kuva,
+		p: { xpos:3.2, ypos:1.7, size:2.7, speed:3 }
+	},
+	{
+		t: [180.47, 180.7],
+		a: tonnijani,
+		layer: kuva,
+		p: { xpos:2.9, ypos:-1.6, size:2.7, speed:7 }
+	},
+	{
+		t: [192.8, 193.8],
+		a: tonnijani,
+		layer: kuva,
+		p: { xpos:-0.5, ypos:{lerp:[-1.1,2]}, size:0.5, speed:-76 }
+	},
+	
+	
+	{
+		t: [23.54, 35.75],
+		a: anim,
+		layer: kuva,
+		p: { id:17, alpha: 0.7, mul:1.5, blur:4, speed:2 }
+	},
+	{
+		t: [33.75, 50.3],
+		a: anim,
+		layer: kuva,
+		p: { id:5, alpha:1.0, blur: 5, speed:2 }
+	},
+	{
+		t: [50.7, 65.5],
+		a: [
+		{
+		a: anim,
+		layer: kuva,
+		p: { id:23, alpha: 1.0, blur: 4, speed:5 }
+		},
+		{
+		a: pp,
+		p: { edge: 0.00008, s_edge: 0.1, s_bg: 0.5, t_edge:0.5, pow_bg:12.0, colorscale:1000.0 }
+		}
+		]
+	},
+	{
+		t: [65.5, 69.5],
+		a: anim,
+		layer: kuva,
+		p: { id:29, alpha: { saw: [0.0, 1.0, 0.2] }, blur: 1, speed:15 }
+	},
+	{
+		t: [69.5, 70.8],
+		a: [
+			{ a: anim,
+			  layer: kuva,
+			  p: { id:31, alpha: {saw:[0.01,0.5,0.1]}, blur: 5, speed:95 }
+			}
+		]
+	},
+	{
+		t: [70.8, 75.8],
+		a: [
+		{
+		a: anim,
+		layer: kuva,
+		p: { id:32, alpha: {saw:[0.3,0.4,0.1]}, blur: 5, speed:4 }
+		},
+		{
+		a: text,
+		layer: teksti,
+		//p: { text:die, size: 0.2, alpha:0.9, x:-0.5, y:{jerk:[0.25,-0.15]}, n:{random:[0,4]} }
+		p: { text:die, size: 0.2, alpha:{jerk:[0.0,0.8,0.4]}, x:-0.5, y:{jerk:[0.3,-0.5,0.8]}, n:{random:[{lerp:[0,7]},{lerp:[2,9]}]} }
+		},
+		{
+		a: blur,
+		p: { layer:teksti, amount:{saw:[0.0,0.2,0.01]}, mul: 1.0 }
+		},
+		{
+		a: pp,
+		p: { edge: 0.0004, s_edge: 3.0, s_bg: 0.5, t_edge:2.5, pow_bg:6.0, colorscale:20.0 }
+		}
+		]
+	},
+	{
+		t: [75.8, 80.7],
+		a: [
+		{
+		a: anim,
+		layer: kuva,
+		p: { id:21, alpha: 1.0, blur: 2, speed:5 }
+		},
+		{
+		a: text,
+		layer: teksti,
+		//p: { text:die, size: 0.2, alpha:0.9, x:-0.5, y:{jerk:[0.25,-0.15]}, n:{random:[0,4]} }
+		p: { text:die, size: 0.2, alpha:{jerk:[0.0,0.8,0.4]}, x:0.0, y:{jerk:[0.3,-0.5,0.8]}, n:{random:[{lerp:[0,7]},{lerp:[2,9]}]} }
+		},
+		{
+		a: pp,
+		p: { edge: 0.0004, s_edge: 3.0, s_bg: 0.5, t_edge:2.5, pow_bg:6.0, colorscale:20.0 }
+		}
+		]
+	},
+	{
+		t: [80.7, 99],
+		a: [
+			{ 
+			a:anim,
+			layer: kuva,
+			p: { id:7, alpha: 1.0, blur: 4, speed:2 }
+			}
+		]
+			
+	},
+	{
+		t: [99, 100.2],
+		a: anim,
+		layer: kuva,
+		p: { id:12, alpha: {saw:[0.2,0.7,0.1]}, blur: 5, speed:95 }
+	},
+	{
+		t: [100.2, 118],
+		a: anim,
+		layer: kuva,
+		p: { id:19, alpha: 1.0, blur: 17, speed:7 }
+	},
+	{
+		t: [118, 134.8],
+		a: [ 
+			{ a: anim,
+			layer: kuva,
+			p: { id:26, alpha: {lerp:[0.3,0.7]}, blur: {lerp:[2,24]}, speed:{lerp:[7,85]} }
+			},
+			{
+			a: pp,
+			p: { edge: 0.0002, s_edge: 4.0, s_bg: 0.5, t_edge:1.0, pow_bg:6.0, colorscale:20.0 }
+			}
+		]
+			
+	},
+	{
+		t: [140, 180],
+		a: anim,
+		layer: kuva,
+		p: { id:0, alpha: 1.0, blur:10 }
+	},
+	{
+		t: [150, 175],
+		a: [	{ 
+			a:text,
+			layer: teksti,
+			p: { text:g, size: {lerp:[0.3,0.8]}, alpha:{jerk:[0.0,{lerp:[0.6,0.9]},0.6]}, x:0.0, y:0.0, n:{random:[0,105]}}
+		}, {
+			a:blur,
+			p: { layer:teksti, amount:{saw:[0,0.2,0.1]}, mul: 1.5 }
+			
+		} ]
+	},
+	
+	{
+		t: [182.5, 185],
+		a: anim,
+		layer: kuva,
+		p: { id:10, alpha: 1.0, speed:2, blur:2 }
+	},
+	{
+		t: [185, 186.5],
+		a: anim,
+		layer: kuva,
+		p: { id:3, alpha: 1.75, speed:14, blur:2 }
+	},
+	{
+		t: [186.5, 300],
+		a: text,
+		layer:teksti,
+		p: { text:f, size: 1.25, alpha: {lerp:[2.0,0.0] } }
+	},
+	{
+	t: [186.5, 193.75],
+	a: [
+		{
+		a: text,
+		layer: kuva,
+		//p: { text:die, size: 0.2, alpha:0.9, x:-0.5, y:{jerk:[0.25,-0.15]}, n:{random:[0,4]} }
+		p: { text:credits, size: 0.5, alpha:{jerk:[0.5,1.0,0.4]}, x:-0.5, y:{jerk:[0.3,-0.3,0.5]}, n:{lerp:[0,1000]} } 
+		},
+		{
+		a: blur,
+		layer: kuva,
+		p: { layer:kuva, amount:{saw:[0.01,0.05,0.1]}, mul:{lerp:[1.5,0.8]} }
+		}
+	]
+	},
+	{
+		t_repeat: [0, 65.5, 2.1, 1.0],
+		//t: [0, 65.5],
+		a: text,
+		layer:teksti,
+		p: { text:f20, size: 1.5, alpha: {lerp:[0.9,0.0] } }
+	},
+	{
+		t: [65.5, 69.5],
+		a: [ 
+			{
+			a:molecule,
+			layer:teksti,
+			p: { count:2, ydir:2, rot:1, zoom:1.5 }
+			},
+			{
+			a:blur,
+			layer:teksti,
+			p: { layer:teksti, amount:0.05, mul: 1.5 }
+			}
+		]
+	},
+	{
+		t: [69.5, 70.8],
+		a: [ 	{
+			a: molecule,
+			layer:teksti,
+			p: { count:4, ydir:{lerp:[2.0,1.0] }, rot:{lerp:[2.0,-3.0] }, zoom:{lerp:[1.5,0.4] } }
+			},	
+			{
+			a:blur,
+			layer:teksti,
+			p: { layer:teksti, amount:0.05, mul: 1.5 }
+			}
+		]
+	},
+	{
+		t: [134.8, 140],
+		a: [
+		{
+			a: molecule,
+			layer:kuva,
+			p: { type:{lerp:[103,4384125]}, count:{lerp:[2.5,7]}, ydir:0.1, rot:-0.0001, ypos:6.5, zoom:{random:[3.3,3.4]} }
+		}, {
+			a: pp,
+			p: { edge: 0.0, s_edge: 0.9, s_bg: 20, t_edge:2.5, pow_bg:1.0, colorscale:0.1 }
+		}
+		]
+		
+		
+	},
+	{
+		t: [0, 300],
+		a: copy,
+		p: { from:[teksti], to:teksti_glow }
+	},
+	{
+		t: [0, 70.8],
+		a: blur,
+		p: { layer:teksti_glow, amount:0.4, mul: 1.5 }
+	},
+	{
+		//t: [0, 100],
+		t_repeat: [0, 65.5, 2.1, 1.0],
+		a: blur,
+		p: { layer:teksti, amount:{lerp:[0.001,0.4]}, mul: 1.0 }
+	},
+	{
+		//t: [0, 100],
+		t_repeat: [0, 65.5, 2.1, 1.0],
+		a: blur,
+		p: { layer:kuva, amount:{lerp:[0.1,0.0]}, mul: {lerp:[1.2,1.0]} }
+	},
+	{
+		t: [185, 193.8],
+		a: blur,
+		p: { layer:teksti_glow, amount:{saw:[0.0,0.2,0.05]}, mul: {lerp:[1.0,0.6]} }
+	},
+	{
+		t: [185, 193.8],
+		a: blur,
+		p: { layer:teksti, amount:{lerp:[0.01,0.3]}, mul: {saw:[0.0,{lerp:[1.0,0.0]},0.1]} }
+	},
+	{
+		t: [0, 300],
+		a: copy,
+		p: { from:[kuva,[teksti_glow,transparent,1.0],teksti], to:fb }
+		//p: { from:[kuva,teksti_glow,teksti], to:fb }
+	}
+]
