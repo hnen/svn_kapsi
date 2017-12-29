@@ -1,0 +1,42 @@
+
+VERTEX FORMAT SEMANTICS
+"""""""""""""""""""""""
+	float4 POSITION ------------- vertex position
+	float2 TEXCOORD/TEXCOORD0 --- Texture coordinate
+	float4 TANGENT -------------- Vertex tangent (XYZ) + bitangent direction (W)
+	float3 NORMAL --------------- normal
+	float3 LODPOS --------------- position for vertex in lower lod level (interpolate to this to achieve smooth transition between lods)
+	float3 LODNORMAL ------------ normal for vertex in lower lod level (interpolate to this to achieve smooth transition between lods)
+
+SHADER CONSTANTS
+""""""""""""""""
+
+SCENE ("soon" to be implemented):
+	float4x4 mat_wvp ------------ World View Projection (Obj -> Screen)
+	float4x4 mat_wv	------------- World View (Obj -> View)
+	float4x4 mat_vp	------------- View Projection (World -> Screen)
+	float4x4 mat_w -------------- World Matrix (Obj -> World)
+	float4x4 mat_v -------------- View (World -> View)
+	float4x4 mat_p -------------- Projection (View -> Screen)
+	float4x4 mat_wvp_i ---------- World View Projection Inverse (Screen -> Obj)
+	float4x4 mat_wv_i ----------- World View Inverse (View -> Obj)
+	float4x4 mat_vp_i ----------- View Projection Inverse (Screen -> World)
+	float4x4 mat_w_i ------------ World Matrix Inverse (World -> Obj)
+	float4x4 mat_v_i ------------ View Inverse (View -> World)
+	float4x4 mat_p_i ------------ Projection Inverse (Screen -> View)
+	float3 dir_lightDirectional - Directional light direction
+
+MATERIAL (these are exported by blender exporter):
+	Texture2D tex_diffuse ------- Diffuse texture
+	Texture2D tex_normalmap ----- Normalmap texture
+	float4 col_diffuse ---------- Diffuse Color (RGB), Intensity (A)
+	float4 col_specular --------- Specular color (RGB), Intensity (A)
+	float f_specPow ------------- Specular power
+
+
+TODO:
+"""""
+ - Tweak LOD transition distances - make sure lods transition smoothly
+ - Export displacement UVs
+ - Export mesh modifier chain (subdiv[+displacement] probably ok for now)
+

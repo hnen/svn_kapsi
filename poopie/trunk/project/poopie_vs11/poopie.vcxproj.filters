@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="base">
+      <UniqueIdentifier>{d555c9ea-f56c-4e8c-8c02-14d81fd1c393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gfx">
+      <UniqueIdentifier>{309be1ed-751b-44f9-9b5c-e99272511cc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{8295f777-c0b3-48c1-b348-192f3fa01bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sfx">
+      <UniqueIdentifier>{741fa840-e4c9-46bf-9857-ab0c0e8080d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{7e2530be-f9e8-446f-bf39-39a7f07dd9dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\win">
+      <UniqueIdentifier>{6eea68a3-b74c-4719-95d3-829a37e65666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gfx\dx11">
+      <UniqueIdentifier>{a2eb183d-a326-422f-ba26-a40e60d6a64e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\win">
+      <UniqueIdentifier>{fe5ebaf5-7cd4-4265-8646-72ad893a75fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sfx\fmod">
+      <UniqueIdentifier>{3eafe1ad-bc3a-4697-bc81-db17e61a88b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\poopie\defs.h" />
+    <ClInclude Include="..\..\src\poopie\base\Array.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\ByteStream.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\DynamicArray.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\File.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\Hash.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\HashMap.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\RefCounted.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\String.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\win\WinDebug.h">
+      <Filter>base\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\Buffer.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\DepthStencil.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\Format.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\ImageData.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\ImageImporter.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\LodMesh.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\Material.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\Mesh.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\MeshData.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\MeshImporter.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\Renderer.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\RenderTarget.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\Shader.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\Texture.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\VertexLayout.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxBuffer.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxDepthStencil.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxDevice.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxFormat.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxRenderer.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxRenderTarget.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxShader.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxTexture.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxVertexLayout.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\Mesh.h">
+      <Filter>gfx\dx11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\math\AABB.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\math\Color4.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\math\Frustum.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\math\Matrix.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\math\Plane.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\math\Sphere.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\math\Spline.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\math\Vector.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\ui\UIElement.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\ui\win32\Window.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\ui\win32\WinUIElement.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\sfx\Music.h">
+      <Filter>sfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\Logger.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\gfx\MeshGen.h">
+      <Filter>gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\Queue.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\poopie\base\Tuple.h">
+      <Filter>base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\poopie\base\File.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\base\Hash.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\CatmullClark.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\ImageData.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\ImageImporter.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\LodMesh.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\Material.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\MeshData.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\MeshImporter.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\VertexLayout.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxBuffer.cpp">
+      <Filter>gfx\dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxDevice.cpp">
+      <Filter>gfx\dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxFormat.cpp">
+      <Filter>gfx\dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxRenderer.cpp">
+      <Filter>gfx\dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxShader.cpp">
+      <Filter>gfx\dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxTexture.cpp">
+      <Filter>gfx\dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxVertexLayout.cpp">
+      <Filter>gfx\dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\Mesh.cpp">
+      <Filter>gfx\dx11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\math\Spline.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\ui\win32\Window.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\sfx\fmod\Fmod.cpp">
+      <Filter>sfx\fmod</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\MeshGenCube.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\MeshDataExporter.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\poopie\gfx\ImageGenNoise.cpp">
+      <Filter>gfx</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

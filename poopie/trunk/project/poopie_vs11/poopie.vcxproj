@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath11)</VCTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4C199F0C-A8CC-480D-B69C-53EBC85BF546}</ProjectGuid>
+    <RootNamespace>poopie</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)..\..\lib\Effects11\Inc;$(DXSDK_DIR)Include;$(ProjectDir)..\..\lib\zlib123;$(ProjectDir)..\..\lib\lpng1510;$(ProjectDir)..\..\lib\fmod\inc;$(ProjectDir)..\..\src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(ProjectDir)..\..\lib;$(ProjectDir)..\..\lib\fmod\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir)..\..\lib\Effects11\Inc;$(DXSDK_DIR)Include;$(ProjectDir)..\..\lib\zlib123;$(ProjectDir)..\..\lib\lpng1510;$(ProjectDir)..\..\lib\fmod\inc;$(ProjectDir)..\..\src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(ProjectDir)..\..\lib;$(ProjectDir)..\..\lib\fmod\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_O_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>libpng15.lib;d3d11.lib;fmodex_vc.lib;winmm.lib;zlib.lib;dxguid.lib;dxerr.lib</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>libpng15.lib;d3d11.lib;fmodex_vc.lib;winmm.lib;zlib.lib;dxerr.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\poopie\base\ByteStream.h" />
+    <ClInclude Include="..\..\src\poopie\base\DynamicArray.h" />
+    <ClInclude Include="..\..\src\poopie\base\Array.h" />
+    <ClInclude Include="..\..\src\poopie\base\File.h" />
+    <ClInclude Include="..\..\src\poopie\base\Hash.h" />
+    <ClInclude Include="..\..\src\poopie\base\HashMap.h" />
+    <ClInclude Include="..\..\src\poopie\base\Logger.h" />
+    <ClInclude Include="..\..\src\poopie\base\Queue.h" />
+    <ClInclude Include="..\..\src\poopie\base\RefCounted.h" />
+    <ClInclude Include="..\..\src\poopie\base\String.h" />
+    <ClInclude Include="..\..\src\poopie\base\Tuple.h" />
+    <ClInclude Include="..\..\src\poopie\base\win\WinDebug.h" />
+    <ClInclude Include="..\..\src\poopie\defs.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\Buffer.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\DepthStencil.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxBuffer.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxDepthStencil.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxDevice.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxFormat.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxRenderer.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxRenderTarget.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxShader.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxTexture.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\DxVertexLayout.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\dx11\Mesh.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\Format.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\ImageData.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\ImageImporter.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\LodMesh.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\Material.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\Mesh.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\MeshData.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\MeshGen.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\MeshImporter.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\Renderer.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\RenderTarget.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\Shader.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\Texture.h" />
+    <ClInclude Include="..\..\src\poopie\gfx\VertexLayout.h" />
+    <ClInclude Include="..\..\src\poopie\math\AABB.h" />
+    <ClInclude Include="..\..\src\poopie\math\Color4.h" />
+    <ClInclude Include="..\..\src\poopie\math\Frustum.h" />
+    <ClInclude Include="..\..\src\poopie\math\Matrix.h" />
+    <ClInclude Include="..\..\src\poopie\math\Plane.h" />
+    <ClInclude Include="..\..\src\poopie\math\Sphere.h" />
+    <ClInclude Include="..\..\src\poopie\math\Spline.h" />
+    <ClInclude Include="..\..\src\poopie\math\Vector.h" />
+    <ClInclude Include="..\..\src\poopie\sfx\Music.h" />
+    <ClInclude Include="..\..\src\poopie\ui\UIElement.h" />
+    <ClInclude Include="..\..\src\poopie\ui\win32\Window.h" />
+    <ClInclude Include="..\..\src\poopie\ui\win32\WinUIElement.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\poopie\base\File.cpp" />
+    <ClCompile Include="..\..\src\poopie\base\Hash.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\CatmullClark.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxBuffer.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxDevice.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxFormat.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxRenderer.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxShader.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxTexture.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\DxVertexLayout.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\dx11\Mesh.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\ImageData.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\ImageGenNoise.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\ImageImporter.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\LodMesh.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\Material.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\MeshData.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\MeshDataExporter.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\MeshGenCube.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\MeshImporter.cpp" />
+    <ClCompile Include="..\..\src\poopie\gfx\VertexLayout.cpp" />
+    <ClCompile Include="..\..\src\poopie\math\Spline.cpp" />
+    <ClCompile Include="..\..\src\poopie\sfx\fmod\Fmod.cpp" />
+    <ClCompile Include="..\..\src\poopie\ui\win32\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\Effects11\Effects11_2010.vcxproj">
+      <Project>{df460eab-570d-4b50-9089-2e2fc801bf38}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
