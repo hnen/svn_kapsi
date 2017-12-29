@@ -1,0 +1,56 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+         <item name="android:background">#000000</item>
+         <item name="android:textColor">#ffffff</item>
+    </style>
+    
+    <style name="CaptionFont" parent="@android:style/TextAppearance.Medium"> 
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    
+    <style name="DefaultText" parent="@android:style/TextAppearance.Medium"> 
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#DC9E1F</item>
+    </style>
+    
+    <style name="MediumText" parent="@style/DefaultText"> 
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="SmallText" parent="@android:style/TextAppearance.Medium"> 
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#DC9E1F</item>
+    </style>
+    
+    <style name="SmallButton" parent="@style/DefaultButton"> 
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="LargerText" parent="@android:style/TextAppearance.Medium"> 
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">#DC9E1F</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="DefaultButton" parent="@android:style/TextAppearance.Medium"> 
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#DC9E1F</item>
+    </style>
+    
+</resources>

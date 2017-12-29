@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textview_dashboard_frequency_intensity_frequency"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="24 kHz"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <SeekBar
+        android:id="@+id/seekbar_dashboard_frequency_intensity"
+        style="@style/DefaultText"        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textview_dashboard_frequency_intensity_frequency"
+        android:max="100" />
+
+    <TextView
+        android:id="@+id/textview_dashboard_frequency_intensity_amount"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/seekbar_dashboard_frequency_intensity"
+        android:text=" + 10dB"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

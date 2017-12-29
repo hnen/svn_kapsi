@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Balancer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_title">Balancer</string>
+    <string name="button_listen">Listen Audio Clips</string>
+    <string name="button_calibrate">Start Calibration</string>
+    <string name="caption_calibrate_intro">Calibration</string>
+    <string name="text_calibrate_intro_research">
+        Press \'continue\' when you are ready.
+    </string>
+    <string name="text_calibrate_intro">
+        Put your headset on now and follow instructions. Don\'t change the volume during the process.\n
+        This is needed for optimal listening and hearing performance.
+    </string>
+    <string name="caption_calibrate_delay">Calibration</string>
+    <string name="text_calibrate_delay">
+        You are going to hear an audio clip. Adjust the wheel where the audio sounds the most comprehensible sound for you.
+	</string>
+    <string name="caption_calibrate_frequency">Step 2 of 2</string>
+    <string name="text_calibrate_frequency">
+        Next you are going to hear sounds. The app will measure your hearing threshold in different frequencies.\n
+        Press and HOLD the button down the WHOLE time you are hearing the sound.
+	</string>
+
+    <string name="text_audioselector_device">This list contains media files saved on the device.</string>
+    <string name="text_audioselector_builtin">List of files used in the calibration.</string>
+    <string name="text_audioselector_history">This list will contain latest played files.</string>
+    <string name="text_calibrate_delay_info">SCROLL the wheel until the voice sounds as combrehensible as possible. Then tap DONE.</string>
+    <string name="versionstring">v1.03</string>
+    <string name="text_main_get_started">Get started by tapping \'Start Calibration\'</string>
+    
+    
+</resources>

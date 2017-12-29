@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.audiobalance.MainActivity" >
+
+    <TextView
+        android:id="@+id/textview_versiontext"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/versionstring" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_small" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/CaptionFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_title" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/LargerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_versiontext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Welcome to Balancer!" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/text_main_get_started" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/DefaultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:onClick="openCalibrationActivity"
+        android:text="@string/button_calibrate" />
+
+    <Button
+        android:id="@+id/button_main_open_audio_selector"
+        style="@style/SmallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView01"
+        android:layout_centerHorizontal="true"
+        android:onClick="openAudioSelector"
+        android:text="@string/button_listen" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        style="@style/MediumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:gravity="center_horizontal"
+        android:text="You can also go directly listen audio files if you have already completed the calibration." />
+
+</RelativeLayout>

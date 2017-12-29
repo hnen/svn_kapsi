@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textview_dashboard_testsubject_id"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Subject ID"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/edittext_dashboard_testsubject_id"
+        style="@style/DefaultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:singleLine="true" />
+        
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delay calibration play order"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+	<RadioGroup 
+	    
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    <RadioButton
+	        style="@style/DefaultText"
+	        android:id="@+id/radiobutton_dashboard_playorder_random"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Random" />
+	
+	    <RadioButton
+	        style="@style/DefaultText"
+	        android:id="@+id/radiobutton_dashboard_playorder_ab"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="A+B" />
+	
+	    <RadioButton
+	        style="@style/DefaultText"
+	        android:id="@+id/radiobutton_dashboard_playorder_ac"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="A+C" />
+	    
+	    <RadioButton
+	        style="@style/DefaultText"
+	        android:id="@+id/radiobutton_dashboard_playorder_speech"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Speech" />
+	    
+	    </RadioGroup>
+    
+
+
+</LinearLayout>

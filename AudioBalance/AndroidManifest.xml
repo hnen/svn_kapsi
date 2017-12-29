@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.audiobalance.proto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+	
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CalibrateActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/app_name" />
+        
+        <activity android:name=".AudioSelectorActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/app_name" />
+        
+        <activity android:name=".DashboardActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/app_name" />
+        
+        <activity android:name=".TestVolumeActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/app_name" />
+        
+        <activity android:name=".CalibrateVolumeActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/app_name" />
+        
+        <activity android:name=".MediaPlayerActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/app_name">
+                   
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="video/*" />
+            </intent-filter>            
+            
+        </activity>
+        
+    </application>
+
+</manifest>

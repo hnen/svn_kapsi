@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"        
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Calibration Results"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textview_audiofile_desc"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textview_calibration_summary_delay"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="12dp"
+        android:text="L"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textview_audiofile_desc"
+        android:layout_alignParentRight="true"
+        android:text="R"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <com.audiobalance.proto.FrequencyChart
+        android:id="@+id/frequencychart_calibration_summary"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignLeft="@+id/textview_audiofile_desc"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/button_calibrate_summary_confirm"
+        style="@style/DefaultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textview_calibration_summary_delay"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:text="Done" />
+
+    <TextView
+        android:id="@+id/textview_calibration_summary_delay"
+        style="@style/DefaultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/balanceindicator_calibration_summary"
+        android:layout_centerHorizontal="true"
+        android:text="+10ms"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.audiobalance.proto.BalanceIndicator
+        android:id="@+id/balanceindicator_calibration_summary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/textview_audiofile_desc"
+        android:layout_below="@+id/frequencychart_calibration_summary"
+        android:layout_marginTop="8dp" />
+    
+</RelativeLayout>
