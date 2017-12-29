@@ -1,0 +1,496 @@
+[
+
+
+	{
+		t: [64,95],
+//		t: [144 ,195],
+		a: [
+				{	a: cam,
+					layer: apollo,
+					p: { pos:[ {spectrum:[0,15,-6]}, {spectrum:[16,31,160]}, -30 ] , dst:[0,0,0]  }
+				},
+				{	a: gasket,
+					layer: apollo,
+					p: { mesh:circleOne, pos:[0,0,0], num:{spectrum:[0,31,6]}, rotX:90, rotY:180, rotZ:{lerp:[0,100]}, scale:[10,10,10] }
+				},
+
+				{	a: blur,
+					p: { amount:  {spectrum:[12,24,0.1]}, src: apollo, dst: apollo }
+				},
+				{	a: gradient,
+					p: { src: apollo, dst: apollogradient }
+				},
+			{	a: blur_vfield,
+				p: { amount:0.025, src: apollogradient, dst: apollogradient }
+			},
+			{	a: particles,
+				p: { dirs: apollogradient, cols: apollo, spawn_only_visible: 1, colorize_particles:0, mul_len:1.0, mul_brig:2.0 }
+			},
+
+				{	a: render_layer,
+					p: {src: apollo}
+
+				}
+
+
+			]
+
+	},
+
+
+	{
+		//t: [56,64],
+		t: [300,301],
+		a: [
+		// SAXI :DDD
+				{	a: cam,
+					layer: saxi,
+					p: { pos:[ 0, 0, {cberp:[100,10,0,0.2]} ] , dst:[0,0,1] }
+				},
+				{	a: clear,
+					layer: saxi,
+					p: { col:[0,0,0,1] }
+				},
+				{	a: mesh,	layer: saxi,
+					p: { mesh:scissors_1, pos:[1,-3,0], rotZ:{lerp:[90,0, 0,1.0  ]} }
+				},
+				{	a: mesh,	layer: saxi,
+					p: { mesh:scissors_2, pos:[1,-3,0], rotZ:{lerp:[180,0, 0,1.0  ]} }
+				},
+
+				{	a: mesh,	layer: saxi,
+					p: { mesh:scissors_1, pos:[1,3,0], rotZ:{lerp:[270,180, 0,1.0  ]} }
+				},
+				{	a: mesh,	layer: saxi,
+					p: { mesh:scissors_2, pos:[1,3,0], rotZ:{lerp:[360,180, 0,1.0  ]} }
+				},
+
+				{	a: mesh,	layer: saxi,
+					p: { mesh:scissors_1, pos:[-2,6,0], rotZ:{lerp:[-270,-90, 0,1.0  ]} }
+				},
+				{	a: mesh,	layer: saxi,
+					p: { mesh:scissors_2, pos:[-2,6,0], rotZ:{lerp:[-180,-90, 0,1.0  ]} }
+				},
+
+				{	a: mesh,	layer: saxi,
+					p: { mesh:scissors_1, pos:[-2,0,0], rotZ:{lerp:[-270,-90, 0,1.0  ]} }
+				},
+				{	a: mesh,	layer: saxi,
+					p: { mesh:scissors_2, pos:[-2,0,0], rotZ:{lerp:[-180,-90, 0,1.0  ]} }
+				},
+
+
+				{	a: blur,
+					p: { amount: {cberp:[0,4,0,12]}, src: saxi, dst: saxi }
+				},
+				{	a: render_layer,
+					p: {src: saxi}
+
+				}
+
+
+			]
+
+		},
+
+
+	{ // aamunkoitto
+		t: [0,47.2],
+		a: [
+				{	a: cam,
+					p: { pos:[0,0,0], dst:[0,0,1] }
+				},
+				{	a: render_perlinbg,
+					layer: scene
+				},
+				{	a: mesh,
+					layer: scene,
+					p: { mesh:sphere, pos:[0,{cberp:[-12,2,0,30]},10.9], scale:[6,6,1] }
+				},
+				{	a: mesh,
+					layer: scene,
+					p: { mesh:plane, pos:[0,-3.1,0] }
+				},
+				{	a: gradient,
+					p: { src: scene, dst: gradient }
+				},
+				{	a: blur_vfield,
+					p: { amount: 0.07, src: gradient, dst: gradient }
+				},
+				{	a: clear,
+					layer: scene,
+					p: { col:[0,0,0,0] }
+				},
+				{	a: mesh,
+					layer: scene,
+					p: { mesh:sphere, pos:[0,{cberp:[-12,2,0,30]},10.9], scale:[6,6,1] }
+				},
+				{	a: mesh,
+					layer: scene,
+					p: { mesh:sphere, pos:[{cberp:[-9,0,29,45]},2,9.9], scale:[5.3,5.3,1], shader:mesh_black }
+				},
+				{	a: mesh,
+					layer: scene,
+					p: { mesh:plane, pos:[0,-3.1,0], shader:mesh_black }
+				},
+				{	a: blur,
+					p: { amount: 0.3, src: scene, dst: scene_blur }
+				},
+				{	a: blur,
+					p: { amount: 0.1, src: scene, dst: scene }
+				},
+				{	t:[30,47],
+					a: text,
+					p: {pos:[-0.5,2,10], normal:[0,0,-1], up:[0,1,0], N:50, t:{lerp:[0,5,30,47]}, scale:2, size:1, range:[8,8], seed:213}
+				},
+				{	a: render_layer,
+					p: {src: scene}
+				},
+				{	a: particles,
+					p: { dirs: gradient, cols: scene_blur, spawn_only_visible: 1, colorize_particles:0 }
+				}
+		   ]
+	},
+	{  // sepon syntymä (64s ->)
+		t: [80,126],
+		a: [
+			{	a: cam,
+				p: { pos:[0,{cberp:[50,10,0,10]},{cberp:[1,15,0,30]}], dst:[0,{lerp:[-10,15,8,50]},0], up:[0,1,0] }
+			},
+			{
+				a: render_perlinbg,
+				layer: scene_grad
+			},
+			{	a: mesh,
+				layer: scene_grad,
+				p: { mesh:plane2, pos:[0,0,0], shader:mesh_tex, scale:[5,5,5], tex:blob }
+			},
+			{	a: mesh,
+				layer: scene,
+				p: { mesh:plane2, pos:[0,0,0], shader:mesh_tex, scale:[5,5,5], tex:blob }
+			},
+			{	a: seppo,
+				t:[96,200],
+				layer: scene,
+				p: { mesh:seppo, pos:[0,{lerp:[-12,10,8,50]},0], rotX:-90, rotY:{lerp:[0,1000]}, shader:seppo, scale:[5,5,5] }
+			},
+			{	a: seppo,
+				t:[96,200],
+				layer: scene_grad,
+				p: { mesh:seppo, pos:[0,{lerp:[-12,10,8,50]},0], rotX:-90, rotY:{lerp:[0,1000]}, shader:seppo, scale:[5,5,5] }
+			},
+			{
+				a: blur,
+				p: { amount: {cberp:[0.1,0.01,8,50]}, src: scene_grad, dst: scene_grad }
+			},
+			{	a: gradient,
+				p: { src: scene_grad, dst: gradient }
+			},
+			{
+				a: blur_vfield,
+				p: { amount: {cberp:[0.1,0.001,8,50]}, src: gradient, dst: gradient }
+			},
+//			{
+//				a: render_layer,
+//				p: { src: scene }
+//			},
+			{	a: particles,
+				p: { dirs: gradient, cols: scene_grad, spawn_only_visible: 0, colorize_particles:0, mul_len:{cberp:[1.5,1.0,8,50]}, mul_brig:2.0, paska:{spectrum:[0,31]} }
+			}
+//			{ a:clear },
+//			{	a: text,
+//				layer:paska,
+//				p: {pos:[0,-1,0], normal:[0,1,0], up:[0,0,1], N:30, t:{lerp:[0,10]}, scale:2, size:3, range:[20,20], seed:213}
+//			},
+//			{
+//				a: blur,
+//				p: { amount: 0.001, src: paska, dst: paska }
+//			},
+//			{
+//				a: render_layer,
+//				p: {src:paska}
+//			}
+		   ]
+	},
+
+	{
+//The Sixth Mystery: The Seal of the Power-Angels seu Potestatum ex Thoro VI. Bi- bliis arcaiiorum, over the Angels and Spirits of all the Elements
+		t: [48,94],
+		a: [
+				{	a: cam,
+					layer: astu,
+					p: { pos:[0,0,{cberp:[-10,-3010.02,8,15]}], dst:[1000,0,1] }
+				},
+				{	a: mesh,
+					layer: astu,
+					p: { mesh:tri1, pos:[0,0,0], rotX:90, rotY:180, shader:white, scale:[50,50,50] }
+				},
+				{	a: mesh,
+					layer: astu,
+					p: { mesh:square1, pos:[0,0,0], rotX:90, rotY:180, shader:white, scale:[116,116,116] }
+				},
+				{	a: mesh,
+					layer: astu,
+					p: { mesh:circle2, pos:[0,0,0], rotX:90, rotY:180, shader:white, scale:[50,50,50] }
+				},
+				{	a: mesh,
+					layer: astu,
+					p: { mesh:circle, pos:[0,200,0], rotX:15, rotY:180, shader:white, scale:[50,50,50] }
+				},
+				{	a: mesh,
+					layer: astu,
+					p: { mesh:circle2, pos:[3500,-2000,30], rotX:90, rotY:180, shader:white, scale:[55,55,55] }
+				},
+				{	a: mesh,
+					layer: astu,
+					p: { mesh:circle2, pos:[-3500,-2000,30], rotX:90, rotY:180, shader:white, scale:[55,55,55] }
+				},
+				{	a: mesh,
+					layer: astu,
+					p: { mesh:circle2, pos:[0,4000,30], rotX:90, rotY:180, shader:white, scale:[55,55,55] }
+				}			]
+
+	},
+	{ // koti
+		//t: [96, 126],
+		t: [48,62],
+		a: [
+			{	a: cam,
+				p: { pos:[{cberp:[0,-30, 0,20]},{cberp:[50,2,0,30]},{cberp:[0,-20,0,20]}], dst:[0,0,0], up:[0,0,1], fov:45 }
+			},
+			{	a: mesh,
+				layer:scene4,
+				p: { mesh:sphere, pos:[-20,0,-20], rotY:{lerp:[0,100]}, rotX:{spectrum:[16,31,200]}, shader:koti, tex:vfield_perlin, scale:[7,7,7] }
+			},
+			{	a: mesh,
+				layer:scene3,
+				p: { mesh:sphere, pos:[-17,2,-10], rotY:{lerp:[0,100]}, shader:mesh_moon, scale:[4,4,4] }
+			},
+			{	a: mesh,
+				layer:scene2,
+				p: { mesh:sphere, pos:[-17,2,-10], rotY:{lerp:[0,100]}, shader:mesh_black, scale:[4,4,4] }
+			},
+			{	a: mesh,
+				layer: scene2,
+				p: { mesh:sphere, pos:[20,0,20], scale:[16,16,16] }
+			},
+			{	a: blur,
+				p: { amount:{cberp:[0.001,0.07,0,30]}, src: scene4, dst: scene4 }
+			},
+			{	a: blur,
+				p: { amount:{lerp:[ {spectrum:[4,8,0.1]} ,0.02]}, src: astu, dst: astu }
+			},
+			{	a: render_layer,
+				layer:scene,
+				p: {src: astu}
+			},
+			{	a: render_layer,
+				layer:scene,
+				p: {src: scene4}
+			},
+			{	a: blur,
+				p: { amount:0.1, src: scene2, dst: scene2 }
+			},
+			{	a: gradient,
+				p: { src: scene, dst: gradient }
+			},
+			{	a: blur_vfield,
+				p: { amount:0.1, src: gradient, dst: gradient }
+			},
+			{	a: render_layer,
+				p: {src: astu}
+			},
+			{	a: render_layer,
+				p: {src: scene3}
+			},
+			{	a: render_layer,
+				p: {src: scene2}
+			},
+			{	a: particles,
+				p: { dirs: gradient, cols: scene, spawn_only_visible: 1, colorize_particles:1, mul_len:{cberp:[2.0,1.5,0,30]}, mul_brig:{cberp:[1.2,2.0,0,30]} }
+			}
+			]
+	},
+
+	{ // seppo matkustaa
+		t: [128, 144],
+		a: [
+			{	t_rel:[8,16],
+				a: cam,
+				p: { pos:[ 10,{lerp:[-50,50,8,14]},-10], dst:[0,5,1] }
+			},
+			{	t_rel:[0,2],
+				a: cam,
+				p: { pos:[0,0,10], dst:[0,5,1] }
+			},
+			{	t_rel:[2,4],
+				a: cam,
+				p: { pos:[0,20,0], dst:[0,5,1], up:[0,1,0] }
+			},
+			{	t_rel:[4,6],
+				a: cam,
+				p: { pos:[-10,-1,2], dst:[0,5,1] }
+			},
+			{	t_rel:[6,8],
+				a: cam,
+				p: { pos:[10,5,2], dst:[0,5,1] }
+			},
+			{	a: render_perlinbg,
+				layer: scene_dirs
+			},
+			{	t_rel:[0,14],
+				a: seppo,
+				layer: scene_dirs,
+				p: { mesh:seppo, pos:[0,0,0], rotX:-90, rotY:{lerp:[0,200]}, shader:seppo, scale:[5,5,5] }
+			},
+			{	t_rel:[0,14],
+				a: seppo,
+				layer: scene,
+				p: { mesh:seppo, pos:[0,0,0], rotX:-90, rotY:{lerp:[0,200]}, shader:seppo, scale:[5,5,5] }
+			},
+			{	a: blur,
+				p: { amount:0.01, src: scene_dirs, dst: scene_dirs }
+			},
+			{	a: blur,
+				p: { amount:0.1, src: scene, dst: scene }
+			},
+			{	a: gradient,
+				p: { src: scene_dirs, dst: gradient }
+			},
+			{	a: blur_vfield,
+				p: { amount:0.025, src: gradient, dst: gradient }
+			},
+			{	a: particles,
+				p: { dirs: gradient, cols: scene, spawn_only_visible: 1, colorize_particles:0, mul_len:1.0, mul_brig:2.0, paska:{spectrum:[0,31]} }
+			}
+			]
+	},
+	{ // saapuminen
+		t: [144, 175],
+		//t: [0, 1000],
+		a: [
+			{	a: cam,
+				p: { pos:[0,{cberp:[0,20,7,12]},{cberp:[-500,-50,0,10]}], dst:[{cberp:[5,0,0,5]},{cberp:[0,70,9,15]},2], fov:35 }
+			},
+			{	t: [159.8, 175],
+				a: render_perlinbg,
+				layer:scene
+			},
+			{	a: mesh,
+				t: [144,175],
+				layer:scene,
+				p: { mesh:sphere, pos:[0,0,2], rotX:50, rotY:{lerp:[50,100]}, shader:koti, tex:vfield_perlin, scale:[50,50,50] }
+			},
+			{	a: seppo,
+				t:[152,175],
+				layer:scene,
+				p: { mesh:seppo, pos:[0,200,150], rotX:-50, rotY:0, scale:[50,50,50] }
+			},
+			{	a: blur,
+				p: { amount: {cberp:[0.06,1.0,16,26]}, src: scene, dst: scene }
+			},
+			{	a: gradient,
+				p: { src: scene, dst: gradient }
+			},
+//k			{	a: render_layer,
+//k				p: {src: scene}
+//k			},
+			{	t:[0,160],
+				a: particles,
+				p: { dirs: gradient, cols: scene, spawn_only_visible: 1, colorize_particles:0, mul_len:{cberp:[0.5,1.5,0,10]}, mul_brig:1.5 }
+			},
+			{	t:[160,300],
+				a: particles,
+				p: { dirs: gradient, cols: scene, spawn_only_visible: 1, colorize_particles:0, mul_len:{cberp:[0.5,1.5,0,10]}, mul_brig:1.5, paska:{mul:[{lerp:[0,10]},{spectrum:[0,31]}]} }
+			}
+			]
+	},
+	{ // pörr
+		t: [175, 184],
+		a: [
+			{	a: cam,
+				p: { pos:[0,0,0], dst:[0,0,1], fov:35 }
+			},
+			{	a: text,
+				p: {pos:[0,0,5], normal:[0,0,-1], up:[0,1,0], N:51, straight:1, t:{lerp:[0,200]}, size:1, scale:1, range:[2,5.5], seed:213}
+			}
+		   ]
+	},
+	{
+		t: [64, 80],
+		a: [
+			{	a: cam,
+				p: { pos:[0,0,0], dst:[0,0,1], fov:35 }
+			},
+			{	a: okkult,
+				layer: scene_blur,
+				p: { y:{jerk:[0.01,1.0,0.2]}, rot:{lerp:[0,10]} }
+			},
+//			{	a: blur,
+//				p: { amount:{jerk:[0.0,1.0,0.02]}, src: scene_blur, dst: scene_blur }
+//			},
+			{	a: okkult,
+				layer: scene,
+				p: { y:{jerk:[0.01,1.0,0.2]}, rot:{lerp:[0,10]} }
+			},
+			{	a: render_perlinbg,
+				layer: scene_blur
+			},
+			{	a: gradient,
+				p: { src: scene, dst: gradient }
+			},
+			{	a: blur_vfield,
+				p: { amount:{jerk:[0.01,1.0,0.2]}, src: gradient, dst: gradient }
+			},
+			{	a: particles,
+				p: { dirs: gradient, cols: scene_blur, spawn_only_visible: 1, colorize_particles:0, mul_len:4.0, mul_brig:3.5 }
+			}//,
+
+
+//			{
+//				a: render_layer,
+//				p: {src:scene_blur}
+//			}
+
+		   ]
+	},
+	{
+		t: [175,184],
+		a: [
+			{	a: cam,
+				p: { pos:[0,0,0], dst:[0,0,1], fov:35 }
+			},
+			{	a: okkult,
+				layer: scene_blur,
+				p: { y:{jerk:[0.01,1.0,0.2]}, rot:{lerp:[0,10]}, death:1 }
+			},
+//			{	a: blur,
+//				p: { amount:{jerk:[0.0,1.0,0.02]}, src: scene_blur, dst: scene_blur }
+//			},
+			{	a: okkult,
+				layer: scene,
+				p: { y:{jerk:[0.01,1.0,0.2]}, rot:{lerp:[0,10]}, death:1 }
+			},
+			{	a: render_perlinbg,
+				layer: scene_blur
+			},
+			{	a: gradient,
+				p: { src: scene, dst: gradient }
+			},
+			{	a: blur_vfield,
+				p: { amount:{jerk:[0.01,1.0,0.2]}, src: gradient, dst: gradient }
+			},
+			{	a: particles,
+				p: { dirs: gradient, cols: scene_blur, spawn_only_visible: 1, colorize_particles:0, mul_len:4.0, mul_brig:3.5 }
+			}//,
+//			{
+//				a: render_layer,
+//				p: {src:scene_blur}
+//			}
+
+		   ]
+	}
+
+
+
+]
